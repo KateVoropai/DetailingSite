@@ -1,6 +1,6 @@
 from django.urls import path
-from about_us.views import about_company
+from about_us.views import index
 
 urlpatterns = [
-    path('company/', about_company)
+    path('', index)
 ]
