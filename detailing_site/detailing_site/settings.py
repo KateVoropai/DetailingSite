@@ -59,7 +59,9 @@ ROOT_URLCONF = 'detailing_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,9 +129,9 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "about_us/static"),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "about_us/static"),
+# ]
 
 
 # Default primary key field type
