@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary py-3">
         <div class="container-fluid ms-4">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{% url 'home' %}">
                   <img src="{% static 'about_us/images/CHAMELEON.png' %}" alt="CHAMELEON DETAILING" width="90" height="105" class="d-inline-block align-text-top">
                 </a>    
           <div class="collapse navbar-collapse ms-5 me-3">
@@ -31,7 +31,7 @@
                 <a class="nav-link" aria-current="page" href="#">УСЛУГИ</a>
               </li>
               <li class="nav-item mx-5 fs-4">
-                <a class="nav-link" href="#">ЗАПИСЬ</a>
+                <a class="nav-link" href="{% url 'recording' %}">ЗАПИСЬ</a>
               </li>
             </ul>
             <ul class="navbar-nav mb-2 fw-semibold text-decoration-underline">
@@ -61,21 +61,30 @@
             </ul>
           </div>
         </div>
-      </nav>
+    </nav>
       <div class="container">
         <div class="row">	
         <div class="img-wrap">		
             <img src="{% static 'about_us/images/FULLWASH.png' %}" alt="FULLWASH" width="1320" height="1320" class="opacity-25">
-          <h1 class="fw-bold">
-            ДЕТЕЙЛИНГ ЦЕНТР
-            <br>
-            АВТОМОЙКА В МИНСКЕ
-          </h1>
-       </div>
-      </div>	  		
+          <div class="fw-bold">
+            {% block content %}
+            {% endblock %}
+          </div>
+        </div>
+        </div>	  		
       </div>
-      {% block content %}
-      {% endblock %}
+      <div class="container">
+        <footer class="py-5 my-4 fs-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-4 text-body-secondary">Портфолио</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-4 text-body-secondary">Услуги</a></li>
+            <li class="nav-item"><a href="{% url 'recording' %}" class="nav-link px-4 text-body-secondary">Запись</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-4 text-body-secondary">Контакты</a></li>
+          </ul>
+          <p class="text-center text-body-secondary">© 2024 ChameleonDetailing</p>
+        </footer>
+      </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
