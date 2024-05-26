@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link type="text/css" href="{% static 'about_us/css/styles.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'recording_online/css/styles.css' %}" rel="stylesheet">
 
     <title>
         {% block title %}
@@ -64,9 +65,9 @@
     </nav>
       <div class="container">
         <div class="row">	
-        <div class="img-wrap">		
+        <div>		
             <img src="{% static 'about_us/images/FULLWASH.png' %}" alt="FULLWASH" width="1320" height="1320" class="opacity-25">
-          <div class="fw-bold">
+          <div class="img-wrap">
             {% block content %}
             {% endblock %}
           </div>
