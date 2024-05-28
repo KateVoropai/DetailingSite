@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} Прайс-лист {% endblock %}
+
+{% block content%}
+        <div class="table-responsive">
+            <table class="table table-bordered-light align-middle mt-5">
+                <thead class="fs-4">
+                <tr>
+                    <th scope="col" class="text-center px-4">Наименование услуги</th>
+                    <th scope="col" class="text-center px-4">Легковой</th>
+                    <th scope="col" class="text-center px-4">Джип</th>
+                    <th scope="col" class="text-center px-4">Минивен</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider fs-5">
+                  {% for i in price %}
+                  <tr class="align-bottom">
+                    <td class="fw-semibold">{{ i.name_service|upper }} <br> {{ i.describe_service|wordwrap:10 }}</td>
+                    <td class="text-center fw-semibold">{{ i.car }} руб</td>
+                    <td class="text-center fw-semibold">{{ i.jeep }} руб</td>
+                    <td class="text-center fw-semibold">{{ i.minivan }} руб</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+        </div>
+
+{% endblock %}

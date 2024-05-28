@@ -8,3 +8,6 @@ class RecordingOnline(models.Model):
     car_number = models.CharField(max_length=30, verbose_name="номер автомобиля")
     fullname = models.CharField(max_length=50, verbose_name="имя")
     phone_number = models.CharField(max_length=30, verbose_name="номер телефона")
+
+    def __str__(self):
+        return self.car_number

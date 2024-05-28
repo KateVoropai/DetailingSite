@@ -1,15 +1,5 @@
-/* body {
-    background-image: url('../images/FULLWASH.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
-/* .img-wrap {
-    position: relative;
-} */
-
 .img-wrap {
     position: absolute;
     top: 100px;
-    left: 700px;
+
 }
